@@ -21,4 +21,10 @@ mongoose.connect(uri, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
+}, (err) => {
+    if (err) throw err;
+    console.log('MongoDB connection established')
 })
+
+// set up routes
+app.use('/users', require('./routes/userRouter'));
