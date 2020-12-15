@@ -74,8 +74,7 @@ router.post('/login', async (req, res) => {
             token,
             user: {
                 id: existingUser._id,
-                displayName: existingUser.displayName,
-                email: existingUser.email
+                displayName: existingUser.displayName
             }
         })
     } catch (err) {
@@ -114,5 +113,13 @@ router.post('/tokenIsValid', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 })
+
+router.get("/", auth, async (req, res) => {
+    const user = await User.findById(req.user);
+    res.json({
+        displayName: user.displayName,
+        id: user._id
+    });
+});
 
 module.exports = router;

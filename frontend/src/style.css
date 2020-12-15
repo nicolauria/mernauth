@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #2199df;
+    text-decoration: unset;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: none;
+}
+
+button,
+input[type='submit'] {
+    border: none;
+    background: none;
+    color: unset;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 1rem 0;
+}
+
+/* general */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+    padding: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* header */
+#header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    justify-content: space-between;
+}
+
+#header .title {
+    margin: 0;
+    padding: 0 1rem;
+    color: #fff;
+}
+
+#header .auth-options {
+    height: 100%;
+    display: flex;
+}
+
+#header .auth-options button {
+    padding: 0 1rem;
+    background-color: darkred;
+    color: #fff;
+    font-size: 1.1.rem;
+}
+
+#header .auth-options button:hover {
+    background-color: royalblue;
+}
+
+/* form */
+.form label, .form input {
+    display: block;
+}
+
+.form input {
+    margin-bottom: 1rem;
+}
+
+.form label {
+    margin-bottom: 0.2rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5ren;
+    border: 1px solid #c2c2c2;
+    background-color: #dfdfdf;
+    border-radius: 8px;
+}
+
+.form input[type="submit"] {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+/* error notice */
+.error-notice {
+    color: #fff;
+    background-color: red;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+    #header .title {
+        font-size: 1.2rem;
+    }
+
+    #header .auth-options button {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+}
